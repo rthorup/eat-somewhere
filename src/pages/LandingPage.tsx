@@ -48,20 +48,32 @@ export default function LandingPage() {
         {/* Find panel */}
         <Link
           to="/find"
-          className="flex flex-col justify-end p-10 md:p-16 bg-brand-950 group hover:bg-brand-900/40 transition-colors min-h-[50vh] md:min-h-0"
+          className="relative flex flex-col justify-end p-10 md:p-16 group overflow-hidden min-h-[50vh] md:min-h-0"
         >
-          <p className="text-xs text-brand-500 uppercase tracking-widest mb-4 font-semibold">
-            Community
-          </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-brand-50 leading-tight mb-4">
-            Find Somewhere Worth Going
-          </h2>
-          <p className="text-brand-50/50 text-base leading-relaxed mb-8 max-w-sm">
-            Not reviews. Reasons to go. Real places shared by people who were moved enough to write it down.
-          </p>
-          <span className="text-brand-300 text-sm font-medium group-hover:translate-x-1 transition-transform inline-block">
-            Browse Places →
-          </span>
+          {/* Background photo */}
+          <img
+            src="/restaurant.jpeg"
+            alt=""
+            className="absolute inset-0 w-full h-full object-cover object-center scale-100 group-hover:scale-105 transition-transform duration-700"
+          />
+          {/* Gradient: dark at bottom for text, fading up */}
+          <div className="absolute inset-0 bg-gradient-to-t from-brand-950 via-brand-950/70 to-brand-950/20" />
+
+          {/* Content */}
+          <div className="relative z-10">
+            <p className="text-xs text-brand-500 uppercase tracking-widest mb-4 font-semibold">
+              Community
+            </p>
+            <h2 className="text-3xl md:text-4xl font-bold text-brand-50 leading-tight mb-4">
+              Find Somewhere Worth Going
+            </h2>
+            <p className="text-brand-50/60 text-base leading-relaxed mb-8 max-w-sm">
+              Not reviews. Reasons to go. Real places shared by people who were moved enough to write it down.
+            </p>
+            <span className="text-brand-300 text-sm font-medium group-hover:translate-x-1 transition-transform inline-block">
+              Browse Places →
+            </span>
+          </div>
         </Link>
       </div>
 
